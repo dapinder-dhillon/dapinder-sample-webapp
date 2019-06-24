@@ -14,8 +14,8 @@
     <url>http://www.example.com</url>
 
     <scm>
-        <developerConnection>scm|git|ssh://git@github.com:dapinder-dhillon/dapinder-sample-webapp.git</developerConnection>
-        <url>scm|git|ssh://git@github.com:dapinder-dhillon/dapinder-sample-webapp.git</url>
+        <developerConnection>scm:git:ssh://git@github.com:dapinder-dhillon/dapinder-sample-webapp.git</developerConnection>
+        <url>scm:git:ssh://git@github.com:dapinder-dhillon/dapinder-sample-webapp.git</url>
         <tag>dapinder-sample-webapp-0.0.1</tag>
     </scm>
 
