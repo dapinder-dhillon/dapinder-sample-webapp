@@ -1,0 +1,46 @@
+{
+  "builders": [{
+    "type": "amazon-ebs",
+    "region": "eu-west-1",
+    "source_ami_filter": {
+      "filters": {
+        "virtualization-type": "hvm",
+        "name": "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*",
+        "root-device-type": "ebs"
+      },
+      "owners": ["099720109477"],
+      "most_recent": true
+    },
+    "instance_type": "t2.micro",
+    "ssh_username": "ubuntu",
+    "ami_name": "packer-example-dapinder {{timestamp}}"
+  }],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "target/dapinder-sample-webapp.war",
+      "destination": "/tmp/dapinder-sample-webapp.war"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sleep 30",
+        "sudo apt-get update",
+        "sudo apt-get -y install openjdk-8-jdk",
+        "sudo groupadd tomcat",
+        "sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat",
+        "cd /tmp",
+        "sudo curl -O http://mirrors.ibiblio.org/apache/tomcat/tomcat-8/v8.5.46/bin/apache-tomcat-8.5.46.tar.gz",
+        "sudo mkdir /opt/tomcat",
+        "sudo tar xzvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1",
+        "cd /opt/tomcat",
+        "sudo chgrp -R tomcat /opt/tomcat",
+        "sudo chmod -R g+r conf",
+        "sudo chmod g+x conf",
+        "sudo chown -R tomcat webapps/ work/ temp/ logs/",
+        "sudo cp /tmp/dapinder-sample-webapp.war webapps/"
+      ]
+    }
+
+  ]
+}

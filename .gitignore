@@ -1,3 +1,8 @@
 .idea
 target/
 dapinder-sample-webapp.iml
+.terraform/
+.DS_Store
+*.terraform
+*.tfstate
+*terraform.tfstate.*
