@@ -41,6 +41,5 @@
         "sudo cp /tmp/dapinder-sample-webapp.war webapps/"
       ]
     }
-
   ]
 }
