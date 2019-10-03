@@ -1,4 +1,4 @@
-#Practice Application for trying out AWS
+# Practice Application for trying out AWS
 
 This is sample small application created using Spring MVC (and not Spring boot). Its having two `endpoints` i.e.:
 1. `/home`
