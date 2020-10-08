@@ -68,4 +68,4 @@ is the packer template JSON.
 1. Here I am trying to bake an AMI with Ubuntu 16.04 OS as a source AMI which is being filtered  on virtualization-type, route-device-type, owners etc.
 2. Using an EC2 instance of t2.micro.
 3. The real utility of Packer comes from being able to install and configure software into the images as well. This stage is also known as the provision step. Provisioners are configured as part of the template. 
-4. We'll use the built-in shell provisioner that comes with Packer to install Java8, Tomcat8 and copy our artificat WAR to tomcat/webapps.
+4. We'll use the built-in shell provisioner that comes with Packer to install Java8, Tomcat8 and copy our artificat WAR to tomcat/webapps..
