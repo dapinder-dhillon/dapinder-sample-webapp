@@ -5,7 +5,7 @@
 
     <groupId>com.dapinder.web</groupId>
     <artifactId>dapinder-sample-webapp</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>dapinder-sample-webapp Maven Webapp</name>
@@ -13,11 +13,11 @@
     <url>http://www.example.com</url>
 
     <scm>
-        <!--<developerConnection>scm:git:ssh://git@github.com:dapinder-dhillon/dapinder-sample-webapp.git</developerConnection>-->
         <developerConnection>scm:git:https://github.com/dapinder-dhillon/dapinder-sample-webapp.git</developerConnection>
-        <!--<url>scm:git:ssh://git@github.com:dapinder-dhillon/dapinder-sample-webapp.git</url>-->
+        <!--<developerConnection>scm:git:https://github.com/dapinder-dhillon/dapinder-sample-webapp.git</developerConnection>-->
         <url>scm:git:https://github.com/dapinder-dhillon/dapinder-sample-webapp.git</url>
-      <tag>dapinder-sample-webapp-0.0.2</tag>
+        <!--<url>scm:git:https://github.com/dapinder-dhillon/dapinder-sample-webapp.git</url>-->
+      <tag>HEAD</tag>
   </scm>
 
     <properties>
