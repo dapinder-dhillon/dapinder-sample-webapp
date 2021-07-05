@@ -13,12 +13,20 @@
     <url>http://www.example.com</url>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/dapinder-dhillon/dapinder-sample-webapp.git</developerConnection>
         <!--<developerConnection>scm:git:https://github.com/dapinder-dhillon/dapinder-sample-webapp.git</developerConnection>-->
-        <url>scm:git:https://github.com/dapinder-dhillon/dapinder-sample-webapp.git</url>
+        <developerConnection>scm:git:https://github.com/dapinder-dhillon/dapinder-sample-webapp.git</developerConnection>
         <!--<url>scm:git:https://github.com/dapinder-dhillon/dapinder-sample-webapp.git</url>-->
+        <url>scm:git:https://github.com/dapinder-dhillon/dapinder-sample-webapp.git</url>
       <tag>HEAD</tag>
   </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>myRepoId</id>
+            <name>myCompanyReporsitory</name>
+            <url>file:~/tmp</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
